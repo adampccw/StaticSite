@@ -1,18 +1,29 @@
-<script>
-function load(){
-var name ="UserName";
-if(name=(new RegExp('[?&]'+encodeURIComponent(name)+'=([^&]*)')).exec(location.search))
-var uname = decodeURIComponent(name[1]);
-if(uname != undefined)
-document.getElementById("UserLabel").innerHTML  ="Hello "+uname+" , Have a nice day!!";
-
-}
-</script>
-
-<html>
-<body onload="load();">
-      <div>
-          <label id="UserLabel" style="color: #0026ff">Hello, please tell me you name.</label> 
-      </div>
-</body>
+<html>
+
+
+<body onload="myFunction()">
+<script type="text/javascript">
+function getUrlParameter(sParam) {
+    var sPageURL = window.location.search.substring(1),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+        }
+    }
+};
+
+ function myFunction(){
+	document.getElementById("demo").innerHTML = "hello: " + getUrlParameter("username");
+ };
+</script>
+
+<p id="demo"></p>
+
+</body>
 </html>
