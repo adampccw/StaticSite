@@ -4,7 +4,27 @@
   </head>
 <body>
   <h> hello world ! this is testing for deep linking </h>
+  
+  <p> links on own </p>
+  <div id="shareContainer1" >
+    <a id="btnShareFacebook1"  title="Click to share on facebook" style="background: #4968ad !important;" href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fwww.cpf.gov.sg%2Fmembers">                            
+      facbook
+    </a>
+    <a id="btnShareTwitter1"  title="Click to share on twitter" style="background: #4aa0ec !important;" href="https://twitter.com/intent/tweet?text=Central%20Provident%20Fund%20Board%20(CPFB)&amp;url=https%3A%2F%2Fwww.cpf.gov.sg%2Fmembers">                            
+      Twitter 
+    </a>
+    <a id="btnShareMail1"  title="Click here to share via email" style="background: #5e9dc3 !important" href="mailto:?subject=Central%20Provident%20Fund%20Board%20(CPFB)&amp;body=https%3A%2F%2Fwww.cpf.gov.sg%2Fmembers">                            
+      Mail to 
+    </a>
+    <a id="btnShareWhatsapp1"  title="Click here to share via whatsapp" style="background: #25D366 !important" href="https://web.whatsapp.com/send?phone=&amp;text=Central%20Provident%20Fund%20Board%20(CPFB)%20https%3A%2F%2Fwww.cpf.gov.sg%2Fmembers" target="_blank">
+      Whatsapp  
+    </a>      
+  </div>
+  
+  
   <p> <a expr:href='"whatsapp://send?text=" + data:post.url' data-action="share/whatsapp/share">Share in Whatsapp</a> </p>
+  
+  
   <p> Share with addThis </p>
   <!-- Go to www.addthis.com/dashboard to customize your tools -->
   <div class="addthis_inline_share_toolbox"></div>
